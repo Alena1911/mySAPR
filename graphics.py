@@ -33,7 +33,7 @@ class General(Frame):
         for each in data:
             index, val1, val2 = each
 
-            if val1 < 3 or val2 < 3:
+            if (val1 < 3 or val2 < 3) and (val1 > -3 or val2 > -3):
                 self.cv.create_line(start_x, 240 - int(val1 * 16), self.shifts[index - 1], 240 - int(val2 * 16))
             else:
                 self.cv.create_line(start_x, 240 - int(val1), self.shifts[index - 1], 240 - int(val2))
